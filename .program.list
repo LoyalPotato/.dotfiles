@@ -1,4 +1,8 @@
 albert
+coc-eslint
+coc-html
+coc-json
+coc-tsserver
 flameshot
 git
 neovim
