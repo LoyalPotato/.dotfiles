@@ -18,6 +18,9 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 
+" lsp
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'gruvbox-community/gruvbox'
 
 
