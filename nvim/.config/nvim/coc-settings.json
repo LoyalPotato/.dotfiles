@@ -1,0 +1,11 @@
+{
+
+    // coc-tsserver
+    "typescript.check.npmIsInstalled": true,
+    "typescript.preferences.quoteStyle": "double",
+
+    "javascript.preferences.quoteStyle": "double"
+
+    // coc-eslint
+
+}
