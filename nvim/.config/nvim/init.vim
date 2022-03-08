@@ -21,6 +21,12 @@ Plug 'vim-airline/vim-airline'
 " lsp
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+
+" nvim-tree
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+
+
 Plug 'gruvbox-community/gruvbox'
 
 
