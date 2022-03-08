@@ -1,4 +1,5 @@
 require("loyalpotato.telescope")
+require("loyalpotato.nvim-tree")
 
 if pcall(require, "plenary") then
 	RELOAD = require("plenary.reload").reload_module
