@@ -4,6 +4,7 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
+set encoding=UTF-8
 
 call plug#begin("~/.vim/plugged")
 
