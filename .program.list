@@ -7,6 +7,7 @@ flameshot
 git
 neovim
 nvm
+nvim-tree
 stow
 vim
 vim-plug
