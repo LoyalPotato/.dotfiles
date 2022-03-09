@@ -1,3 +1,22 @@
+vim.g.nvim_tree_icons = {
+   git = {
+        unstaged = "",
+        staged = "S",
+        untracked = "U"
+   }
+}
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+  return
+end
+
+local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+if not config_status_ok then
+  return
+end
+
+local tree_cb = nvim_tree_config.nvim_tree_callback
+
 require("nvim-tree").setup({
   disable_netrw        = false,
   hijack_netrw         = true,
@@ -49,7 +68,11 @@ require("nvim-tree").setup({
     preserve_window_proportions = false,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+          { key = { "l", "<CR>" }, cb = tree_cb "edit"},
+          { key = "h", cb = tree_cb "close_node"},
+          { key = "v", cb = tree_cb "vsplit"}
+      }
     },
     number = false,
     relativenumber = false,
