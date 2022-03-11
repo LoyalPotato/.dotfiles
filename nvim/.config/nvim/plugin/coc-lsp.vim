@@ -1,3 +1,5 @@
+let g:coc_global_extensions= ["coc-json"] "coc-tsserver, coc-eslint, coc-html
+
 " use <CR> to confirm completion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
@@ -9,3 +11,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " use <c-space>for trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
