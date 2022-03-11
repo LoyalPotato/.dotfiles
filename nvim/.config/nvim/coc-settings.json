@@ -1,8 +1,24 @@
 {
+    // Show inline errors
+    "diagnostic.virtualText": true,
+    "diagnostic.autoRefresh": true,
+    "diagnostic.infoSign": "",
+    "diagnostic.errorSign": "",
+    "diagnostic.hintSign": "",
+    "diagnostic.warningSign": "",
+    // Trying out configs
+    "diagnostic.enableSign": true, 
+    "diagnostic.enableHighlightLineNumber": true,
+    "diagnostic.messageTarget": "echo",
+    "diagnostic.virtualTextAlignRight": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.messageDelay": 10,
+    "codeLens.enable": true,
 
     // coc-tsserver
     "typescript.check.npmIsInstalled": true,
     "typescript.preferences.quoteStyle": "double",
+    "tsserver.disableAutomaticTypeAcquisition": false, // Defaut is false, but just in case. In here because of nvm
 
     "javascript.preferences.quoteStyle": "double"
 
