@@ -65,13 +65,14 @@ require("nvim-tree").setup({
     height = 30,
     hide_root_folder = false,
     side = 'left',
-    preserve_window_proportions = false,
+    preserve_window_proportions = true,
     mappings = {
       custom_only = false,
       list = {
           { key = { "l", "<CR>" }, cb = tree_cb "edit"},
           { key = "h", cb = tree_cb "close_node"},
-          { key = "v", cb = tree_cb "vsplit"}
+          { key = "v", cb = tree_cb "vsplit"},
+          { key = "<C-i>", cb = tree_cb "toggle_file_info"}
       }
     },
     number = false,
