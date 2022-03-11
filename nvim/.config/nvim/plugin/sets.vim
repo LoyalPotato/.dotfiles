@@ -15,6 +15,6 @@ set undodir=~/.vim/unodir
 set undofile
 set incsearch
 set scrolloff=8
-set signcolumn=yes
+set signcolumn=yes:2
 
 set termguicolors
