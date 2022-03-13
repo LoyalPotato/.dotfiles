@@ -8,6 +8,7 @@ git
 neovim
 nvm
 nvim-tree
+    TSInstall: typescript html javascript json jsonc
 stow
 vim
 vim-plug
