@@ -1,1 +1,1 @@
-nnoremap <leader>ttg :NvimTreeToggle<CR>
+highlight NvimTreeGitDirty guifg=#fabd2f gui=NONE
