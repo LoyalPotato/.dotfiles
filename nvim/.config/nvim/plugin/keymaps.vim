@@ -6,6 +6,19 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-w>V <cmd>vnew<CR>
 
+" Search
+
+nnoremap <leader>sr :%s/\<<C-r><C-w>\>/
+
+" Manipulations
+
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
 " Coc-nvim
 
 " use <CR> to confirm completion
@@ -37,6 +50,10 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " Nvim-tree
 
 nnoremap <leader>ttg :NvimTreeToggle<CR>
+
+" Undotree
+
+nnoremap <leader>utg <cmd>UndotreeToggle<CR>
 
 " Fugitive (Git)
 
