@@ -27,7 +27,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
+" undotree
 
+Plug 'mbbill/undotree'
+
+" Theme
 Plug 'gruvbox-community/gruvbox'
 
 
