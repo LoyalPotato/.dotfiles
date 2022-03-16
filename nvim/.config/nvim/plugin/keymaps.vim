@@ -12,12 +12,16 @@ nnoremap <leader>sr :%s/\<<C-r><C-w>\>/
 
 " Manipulations
 
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+ " Line movements
+nnoremap <leader><C-j> <cmd>m .+1<CR>==
+nnoremap <leader><C-k> <cmd>m .-2<CR>==
+inoremap <C-j> <Esc><cmd>m .+1<CR>==gi
+inoremap <C-k> <Esc><cmd>m .-2<CR>==gi
+vnoremap <leader><M-j> <cmd>m '>+1<CR>gv=gv " Not working with mac option 
+vnoremap <leader><M-k> <cmd>m '<-2<CR>gv=gv " Not working with mac option
+
+ " windows
+nnoremap <leader>wse <C-w>=<CR>
 
 " Coc-nvim
 
@@ -60,6 +64,7 @@ nnoremap <leader>utg <cmd>UndotreeToggle<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>gps :Git push<CR>
 nmap <leader>gpl :Git pull<CR>
+nmap <leader>gc :Git checkout<CR>
 
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
