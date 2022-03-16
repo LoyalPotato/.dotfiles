@@ -9,8 +9,7 @@
     // Trying out configs
     "diagnostic.enableSign": true, 
     "diagnostic.enableHighlightLineNumber": true,
-    "diagnostic.messageTarget": "echo",
-    "diagnostic.virtualTextAlignRight": true,
+    "diagnostic.messageTarget": "float",
     "diagnostic.virtualTextCurrentLineOnly": false,
     "diagnostic.messageDelay": 10,
     "codeLens.enable": true,
