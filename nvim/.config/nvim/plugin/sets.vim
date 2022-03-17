@@ -15,6 +15,7 @@ set undodir=~/.vim/unodir
 set undofile
 set incsearch
 set scrolloff=8
-set signcolumn=yes:2
+set signcolumn=auto:2
 
 set termguicolors
+set updatetime=50
