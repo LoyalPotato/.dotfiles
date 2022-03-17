@@ -76,7 +76,7 @@ require("nvim-tree").setup({
       }
     },
     number = false,
-    relativenumber = false,
+    relativenumber = true,
     signcolumn = "yes"
   },
   trash = {
