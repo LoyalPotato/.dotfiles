@@ -9,8 +9,10 @@ neovim
 nvm
 nvim-tree
     TSInstall: typescript html javascript json jsonc
+oh-my-zsh
 ripgrep
 stow
 vim
 vim-plug
-
+zsh-autosuggestions
+zsh-completions
