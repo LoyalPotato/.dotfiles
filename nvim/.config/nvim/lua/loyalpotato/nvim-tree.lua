@@ -65,7 +65,7 @@ require("nvim-tree").setup({
     height = 30,
     hide_root_folder = false,
     side = 'left',
-    preserve_window_proportions = true,
+    preserve_window_proportions = false,
     mappings = {
       custom_only = false,
       list = {
@@ -89,7 +89,7 @@ require("nvim-tree").setup({
       global = false,
     },
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       resize_window = false,
       window_picker = {
         enable = true,
