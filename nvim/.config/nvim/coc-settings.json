@@ -13,7 +13,8 @@
     "diagnostic.virtualTextCurrentLineOnly": false,
     "diagnostic.messageDelay": 10,
     "codeLens.enable": true,
-
+    
+    "signature.preferShownAbove": false,
     // coc-tsserver
     "typescript.check.npmIsInstalled": true,
     "typescript.preferences.quoteStyle": "double",
