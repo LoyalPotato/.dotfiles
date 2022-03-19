@@ -73,12 +73,7 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  jira
-  npm
-  nvm
   react-native
-  vscode
-  yarn
   zsh-autosuggestions
 )
 
