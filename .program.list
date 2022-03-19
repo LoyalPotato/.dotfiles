@@ -4,6 +4,7 @@ coc-html
 coc-json
 coc-tsserver
 flameshot
+fzf
 git
 neovim
 nvm
