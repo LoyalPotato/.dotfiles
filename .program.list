@@ -11,6 +11,7 @@ nvim-tree
     TSInstall: typescript html javascript json jsonc
 oh-my-zsh
 ripgrep
+starship
 stow
 vim
 vim-plug
