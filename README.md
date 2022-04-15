@@ -1,4 +1,4 @@
 # .dotfiles
 
 ## References
-- [ThePrimeage](https://github.com/ThePrimeagen/.dotfiles)
+- [ThePrimeagen](https://github.com/ThePrimeagen/.dotfiles)
