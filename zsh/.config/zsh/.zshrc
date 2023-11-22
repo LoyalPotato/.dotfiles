@@ -73,7 +73,7 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  react-native
+  colorize
   zsh-autosuggestions
 )
 
@@ -119,5 +119,10 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/go/bin/
 
 alias vim="nvim"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
