@@ -1,13 +1,23 @@
 -- Defaults
 
 local navic = require('nvim-navic')
+local function navic_loc()
+    if navic.is_available() then
+        local loc = navic.get_location()
+        if (loc == nil or loc == '') then
+            return ''
+        end
+        return loc
+    end
+    return ''
+end
 
 require('lualine').setup {
     options = {
         icons_enabled = true,
         theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = {
             statusline = {},
             winbar = {},
@@ -22,9 +32,9 @@ require('lualine').setup {
         }
     },
     sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename'},
+        lualine_a = { 'mode' },
+        lualine_b = { { 'FugitiveHead', icon = '' }, 'diagnostics' },
+        lualine_c = { 'filename' },
         lualine_x = {
             'encoding',
             'fileformat',
@@ -35,14 +45,14 @@ require('lualine').setup {
             --     color = { fg = "#ff9e64" },
             -- }
         },
-        lualine_y = {'progress'},
-        lualine_z = {'location'}
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' }
     },
     inactive_sections = {
-        lualine_a = {},
+        lualine_a = { 'filename'},
         lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
+        lualine_c = { },
+        lualine_x = {},
         lualine_y = {},
         lualine_z = {}
     },
@@ -50,15 +60,7 @@ require('lualine').setup {
     winbar = {
         lualine_c = {
             {
-                function()
-                    if navic.is_available() then
-                        local loc = navic.get_location()
-                        if (loc == nil or loc == '') then
-                            return '' -- TODO: Show filename or smt. This is just so that the buffer isn't jumping up and down
-                        end
-                        return loc
-                    end
-                end,
+                navic_loc,
                 draw_empty = true,
             }
         }
