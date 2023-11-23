@@ -19,7 +19,7 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [ ] Add mapping to collapse and open (vim has this integrated I think)
   - [ ] on change, ufo closes everything...
   - [ ] remove the weird numbers and lines in the icons col. There's an issue in their github -->
-- [ ] Get highlight on note, todo, bug, dev_only. <https://github.com/folke/todo-comments.nvim>
+- [x] Get highlight on note, todo, bug, dev_only. <https://github.com/folke/todo-comments.nvim>
 - [x] Icons are not working for navic winbar. nerdfix seems like a way to test what are the options. Just needed to update the font
 - [x] <https://youtu.be/LKW_SUucO-k?si=43b5USFLU3ww_86n&t=40> Has a cool layout for telescope. Maybe this is what I need to change how the file browser looks as well
 - [ ] In telescope, there's a [git_branches picker](https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/lua/tj/telescope/setup.lua#L160C5-L160C17)??
@@ -38,13 +38,15 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [ ] Work with prettier
 - [x] ~~Path auto complete.~~It supposedly already does this
 - [ ] How to undo close of buffer/file
-- [ ] How to switch layouts. For example, I have two verticals, but I want to put the left on the right and vice versa. Same with horizontal
-- [ ] Live grep with a ignore glob list (like vscode...)
+- [x] How to switch layouts. For example, I have two verticals, but I want to put the left on the right and vice versa. Same with horizontal
+- [ ] ~~Live grep with a ignore glob list (like vscode...)~~ Not sure what I meant here
 - [ ] Debugging <https://www.youtube.com/watch?v=RziPWdTzSV8>
 - [x] Configure gitsign hunks. I think this allows for staging sections
-- [ ] Keymap to increase size of current buffer, in either direction
+- [x] Keymap to increase size of current buffer, in either direction
 - [x] Check if the lsp-inlayhints are working. This shows like an IDE with the options. I didn't really find it that useful
 - [x] Put the notify at the bottom?
+- [ ] How to move just the screen and not cursor. I've seen it done on a nvim video
+- [ ] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
 
 ### Unsure
 
