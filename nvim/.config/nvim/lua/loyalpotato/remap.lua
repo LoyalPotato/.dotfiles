@@ -39,8 +39,7 @@ vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 -- Formatting
 
 vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format, { desc = '[F]ormat [A]ll' })
--- vim.keymap.set({"n", "v"}, "<leader>mpb", "=%<CR>", { desc = '[M]ake [P]retty [B]lock'})
--- vim.keymap.set("n", "<leader>mpf", "gg=G''<CR>", { desc = '[M]ake [P]retty [F]ile'})
+vim.keymap.set("v", "<leader>fs", vim.lsp.buf.format, { desc = '[F]ormat [S]ection' })
 -- this is for lsp_config <F3>: Format code in current buffer. See :help vim.lsp.buf.format().
 
 -- window management
@@ -59,4 +58,3 @@ vim.api.nvim_set_keymap("n", "<leader>ht", ":horizontal resize -10<CR>",
 -- Ctrl-W [H|J|K|L]
 -- h split (Has the mappings for how to split vertical and horizontal)
 -- Ctrl-y and Ctrl-e only change the cursor position if it would be moved off screen.
-
