@@ -54,8 +54,9 @@ vim.api.nvim_set_keymap("n", "<leader>he", ":horizontal resize +10<CR>",
 vim.api.nvim_set_keymap("n", "<leader>ht", ":horizontal resize -10<CR>",
     { noremap = true, desc = '[H]orizontal [T]runcate' })
 
+-- NOTE: Some helpful maps
 -- This flips the current buffer according to the action
 -- Ctrl-W [H|J|K|L]
+-- h split (Has the mappings for how to split vertical and horizontal)
+-- Ctrl-y and Ctrl-e only change the cursor position if it would be moved off screen.
 
-
--- <C-W>[v|h][h|j|k|l]
