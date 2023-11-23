@@ -11,7 +11,6 @@
 - [x] Disable the backspace going up a folder if there are no keywords
 - [ ] Make sure that the lsp is how I like
   - [x] C-Space: Should show completion options
-  - [ ] How to go back to use when we go to definition
   - [x] CR/Tab/C-y should all allow the selected item to be chosen
   - [x] Refactoring (lsp handles)<https://youtu.be/NL8D8EkphUw?si=NgJM77W51MOc8qTE&t=1414>
 <!-- 
@@ -29,8 +28,7 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] Change the formatting keymap
 - [x] Keep navic from making the page jump
 - [x] Mapping to open file browser in current dir and not prj dir
-- [ ] Format selection, full file formatting, like option + shift + a <https://www.youtube.com/watch?v=ybUE4D80XSk>
-  - [ ] The lsp has full file formatting: <F3>: Format code in current buffer. See :help vim.lsp.buf.format().
+- [x] Format selection, full file formatting, like option + shift + a <https://www.youtube.com/watch?v=ybUE4D80XSk>
 - [x] Keymap for single line comment
 - [x] Comment for multi line commment
 - [x] A way to copy relative and absolute paths of the file I've selected in the file browser
@@ -47,6 +45,7 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] Put the notify at the bottom?
 - [x] How to move just the screen and not cursor. I've seen it done on a nvim video
 - [x] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
+- [ ] How to search files in telescope with glob pattern
 
 ### Unsure
 
