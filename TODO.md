@@ -45,8 +45,8 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] Keymap to increase size of current buffer, in either direction
 - [x] Check if the lsp-inlayhints are working. This shows like an IDE with the options. I didn't really find it that useful
 - [x] Put the notify at the bottom?
-- [ ] How to move just the screen and not cursor. I've seen it done on a nvim video
-- [ ] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
+- [x] How to move just the screen and not cursor. I've seen it done on a nvim video
+- [x] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
 
 ### Unsure
 
