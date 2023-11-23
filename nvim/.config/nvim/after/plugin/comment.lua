@@ -1,11 +1,3 @@
--- This is for the integrations of ts_context_commentstring
-require('nvim-treesitter.configs').setup {
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
-}
-
 -- While I'd like to have the comments as VSCode, it wouldn't work as well if I want to use motions
 require('Comment').setup({
     toggler = {
