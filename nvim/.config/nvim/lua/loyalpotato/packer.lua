@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = {
-            {'nvim-lua/plenary.nvim'}
+            { 'nvim-lua/plenary.nvim' }
         }
     }
 
@@ -27,10 +27,10 @@ return require('packer').startup(function(use)
     use { 'nvim-tree/nvim-web-devicons' }
 
     -- syntax highlighting
-    use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } )
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     -- colorscheme
-    use {'rebelot/kanagawa.nvim'}
+    use { 'rebelot/kanagawa.nvim' }
 
     -- file navigation/management
     use { 'theprimeagen/harpoon' }
@@ -46,26 +46,26 @@ return require('packer').startup(function(use)
         branch = 'v3.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
+            { 'neovim/nvim-lspconfig' },
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
+            { 'hrsh7th/nvim-cmp' },
 
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-nvim-lua'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'rafamadriz/friendly-snippets'},
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-nvim-lua' },
+            { 'hrsh7th/cmp-path' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'rafamadriz/friendly-snippets' },
 
             -- winbar - top status line
-            {'SmiteshP/nvim-navic'},
+            { 'SmiteshP/nvim-navic' },
 
-            {'L3MON4D3/LuaSnip'},
+            { 'L3MON4D3/LuaSnip' },
         }
     }
 
@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
     use {
         'JoosepAlviste/nvim-ts-context-commentstring',
         requires = {
-            {'nvim-treesitter/nvim-treesitter'}
+            { 'nvim-treesitter/nvim-treesitter' }
         }
     }
 
@@ -101,5 +101,16 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
+    use {
+        "folke/trouble.nvim",
+        requires = { "nvim-tree/nvim-web-devicons" },
+    }
+
+    use {
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim", "folke/trouble.nvim" },
+    }
+
 end)
