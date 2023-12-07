@@ -3,7 +3,7 @@ local action_state = require "telescope.actions.state"
 require("telescope").setup {
     defaults = {
         winblend = 0,
-        sorting_strategy =  "ascending",
+        sorting_strategy = "ascending",
 
         layout_strategy = "flex",
         layout_config = {
@@ -43,7 +43,7 @@ require("telescope").setup {
                     local reg = useSystemClipb and "+" or '"'
                     vim.fn.setreg(reg, path)
                     -- notify has been overriden in notify.lua
-                    vim.notify(path, "info", {title = "COPIED"})
+                    vim.notify(path, "info", { title = "COPIED" })
                 end,
             }
         }
@@ -78,7 +78,9 @@ local builtin = require('telescope.builtin')
 -- TODO: Check which ones I'll actually need
 
 -- Regular Telescope
-vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+local find_cmd = { 'rg', '--files', '--hidden', '-g', '!.git' }
+vim.keymap.set('n', '<leader>sf', function() builtin.find_files({ hidden = true, find_command = find_cmd }) end,
+    { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Search [G]it [F]iles' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
@@ -90,12 +92,12 @@ vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iag
 -- These functions seem interesting
 -- builtin.git_commits({opts})                  *telescope.builtin.git_commits()*
 -- builtin.git_branches({opts})    *telescope.builtin.git_branches()*
--- 
+--
 
--- file_browser 
+-- file_browser
 
 -- reference
---[[ 
+--[[
 mappings = {
     ["i"] = {
         ["<A-c>"] = fb_actions.create,
@@ -134,8 +136,9 @@ mappings = {
 
 local fb = require "telescope".extensions.file_browser
 
-vim.keymap.set("n", "<leader>fbr", fb.file_browser, { desc = '[F]ile [B]rowser [R]oot'})
-vim.keymap.set("n", "<leader>cfb", function() return fb.file_browser({ path = "%:p:h"}) end, { desc = '[C]urrent [F]ile [B]rowser'})
+vim.keymap.set("n", "<leader>fbr", fb.file_browser, { desc = '[F]ile [B]rowser [R]oot' })
+vim.keymap.set("n", "<leader>cfb", function() return fb.file_browser({ path = "%:p:h" }) end,
+    { desc = '[C]urrent [F]ile [B]rowser' })
 
 
 -- Extension Loading
