@@ -45,7 +45,7 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] Put the notify at the bottom?
 - [x] How to move just the screen and not cursor. I've seen it done on a nvim video
 - [x] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
-- [ ] How to search files in telescope with glob pattern
+- [ ] Change the tmux status line to match the colors of vim/lualine [interesting](https://www.reddit.com/r/unixporn/comments/10qovte/kanagawa_neovim_obsidian_chromebrave_kitty_tmux/)
 
 ### Unsure
 
