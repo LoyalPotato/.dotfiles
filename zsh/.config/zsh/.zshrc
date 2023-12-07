@@ -74,6 +74,8 @@ ZSH_THEME="spaceship"
 plugins=(
   git
   colorize
+  tmux
+  # tmuxinator
   zsh-autosuggestions
 )
 
@@ -126,3 +128,12 @@ alias vim="nvim"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+if command -v fd &> /dev/null && command -v xargs &> /dev/null && command -v fzf-tmux &> /dev/null;
+then
+    alias s_cwd='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs vim'
+else
+    echo "fd, fzf-tmux or xargs could not be found"
+    exit 1
+fi
+
