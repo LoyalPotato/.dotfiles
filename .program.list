@@ -1,20 +1,11 @@
 albert
-coc-eslint
-coc-html
-coc-json
-coc-tsserver
 flameshot
 fzf
-git
+fd
 neovim
-nvm
-nvim-tree
-    TSInstall: typescript html javascript json jsonc
 oh-my-zsh
 ripgrep
 starship
 stow
-vim
-vim-plug
-zsh-autosuggestions
-zsh-completions
+tmux
+tpm
