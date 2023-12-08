@@ -122,6 +122,14 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/go/bin/
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/bin
+
+# Remove /mnt/c due to slowness on wsl
+if [[ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]]; then
+    echo "Running in WSL"
+    export PATH=`echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':'`
+fi
 
 alias vim="nvim"
 
@@ -134,6 +142,14 @@ then
     alias s_cwd='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
 else
     echo "fd, fzf-tmux or xargs could not be found"
-    exit 1
 fi
 
+SPACESHIP_BATTERY_SHOW=false
+
+# pnpm
+export PNPM_HOME="/home/loyalpotato/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm ends
