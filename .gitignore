@@ -4,3 +4,6 @@
 .zsh_history
 .netrwhist
 packer_compiled.lua
+bin/bin/
+!bin/bin/.local/*
+.local.env
