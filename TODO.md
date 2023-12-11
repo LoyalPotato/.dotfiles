@@ -47,6 +47,30 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
 - [ ] Change the tmux status line to match the colors of vim/lualine [interesting](https://www.reddit.com/r/unixporn/comments/10qovte/kanagawa_neovim_obsidian_chromebrave_kitty_tmux/)
 - [ ] Have markdown autocompletes, like the vscode extension, such as creating a new checkbox on entering a new line
+- [ ] How to open a tmux session from within vim
+- [ ] How to close another session in tmux. For example I open two sessions, but I no longer need the other one. So I open the session viewer and wanted to just select and kill selected with a key combo or so
+- [ ] When selection the auto complete, if it's a function, it's putting () at the end of it, to call. Don't want that :/
+- [ ] Auto close html tags
+- [ ] How to open a buffer across a specific number of buffers. For example I have 3 vertical, but want to open an horizontal buffer that spans only the two left ones.
+- [ ] How to expand only the selected buffer and not all the vertical buffers and what not.
+- [ ] How to add numbers to buffers so that I can just jump to whichever I want on the pane and not the current buffer.
+- [ ] Do something with this, so that it's hidden instead of closing
+   CTRL-W o                                                CTRL-W_o E445
+   CTRL-W CTRL-O                                   CTRL-W_CTRL-O :on :only
+                   Make the current window the only one on the screen. All other
+                   windows are closed.  For {count} see the :quit command
+                   above :count_quit.
+
+                   When the 'hidden' option is set, all buffers in closed windows
+                   become hidden.
+
+                   When 'hidden' is not set, and the 'autowrite' option is set,
+                   modified buffers are written.  Otherwise, windows that have
+                   buffers that are modified are not removed, unless the [!] is
+                   given, then they become hidden.  But modified buffers are
+                   never abandoned, so changes cannot get lost. 
+- [ ] How to search highlighted section with telescope live grep
+- [ ] In the gitsigns blame, how do I open the link?
 
 ### Unsure
 
