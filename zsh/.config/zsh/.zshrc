@@ -116,19 +116,29 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$HOME/go/bin/
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/usr/bin
+# https://unix.stackexchange.com/questions/124444/how-can-i-cleanly-add-to-path
+pupdate() { case ":${PATH:=$1}:" in *:"$1":*) ;; *) PATH="$1:$PATH" ;; esac; }
 
-# Remove /mnt/c due to slowness on wsl
+export ANDROID_HOME=$HOME/Android/Sdk
+pupdate $ANDROID_HOME/emulator
+pupdate $ANDROID_HOME/tools
+pupdate $ANDROID_HOME/tools/bin
+pupdate $ANDROID_HOME/platform-tools
+pupdate $HOME/go/bin/
+pupdate /usr/local/go/bin
+pupdate /usr/bin
+pupdate $HOME/.dotnet/tools
+pupdate $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
+
+pupdate $HOME/bin
+pupdate $HOME/bin/.local/scripts
+
+# # Remove /mnt/c due to slowness on wsl
 if [[ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]]; then
     echo "Running in WSL"
     export PATH=`echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':'`
+    export PNPM_HOME="/home/loyalpotato/.local/share/pnpm"
+    pupdate $PNPM_HOME
 fi
 
 alias vim="nvim"
@@ -146,10 +156,7 @@ fi
 
 SPACESHIP_BATTERY_SHOW=false
 
-# pnpm
-export PNPM_HOME="/home/loyalpotato/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm ends
+# Bindings
+bindkey -s ^f "tmux-sessionizer\n"
+
+#"/opt/homebrew/bin:/opt/homebrew/sbin:/Users/dbazilio/.nvm/versions/node/v18.18.2/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/share/dotnet:~/.dotnet/tools:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/dbazilio/.nvm/versions/node/v18.18.2/bin:/Users/dbazilio/Android/Sdk/emulator:/Users/dbazilio/Android/Sdk/tools:/Users/dbazilio/Android/Sdk/tools/bin:/Users/dbazilio/Android/Sdk/platform-tools:/Users/dbazilio/go/bin/:/Users/dbazilio/Android/Sdk/emulator:/Users/dbazilio/Android/Sdk/tools:/Users/dbazilio/Android/Sdk/tools/bin:/Users/dbazilio/Android/Sdk/platform-tools:/Users/dbazilio/go/bin/""
