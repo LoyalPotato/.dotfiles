@@ -3,3 +3,4 @@
 .zsh_sessions
 .zsh_history
 .netrwhist
+packer_compiled.lua
