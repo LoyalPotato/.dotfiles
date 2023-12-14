@@ -7,3 +7,4 @@ packer_compiled.lua
 bin/bin/
 !bin/bin/.local/*
 .local.env
+tmux/.config/tmux/plugins
