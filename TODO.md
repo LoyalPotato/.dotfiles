@@ -47,9 +47,9 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] How to duplicate current buffer in both directions. Ctrl W + v works, don't know for horizontal
 - [ ] Change the tmux status line to match the colors of vim/lualine [interesting](https://www.reddit.com/r/unixporn/comments/10qovte/kanagawa_neovim_obsidian_chromebrave_kitty_tmux/)
 - [ ] Have markdown autocompletes, like the vscode extension, such as creating a new checkbox on entering a new line
-- [ ] How to open a tmux session from within vim
+- [x] How to open a tmux session from within vim. (Just run the command)
 - [ ] How to close another session in tmux. For example I open two sessions, but I no longer need the other one. So I open the session viewer and wanted to just select and kill selected with a key combo or so
-- [ ] When selection the auto complete, if it's a function, it's putting () at the end of it, to call. Don't want that :/
+- [x] When selection the auto complete, if it's a function, it's putting () at the end of it, to call. Don't want that :/
 - [ ] Auto close html tags
 - [ ] How to open a buffer across a specific number of buffers. For example I have 3 vertical, but want to open an horizontal buffer that spans only the two left ones.
 - [ ] How to expand only the selected buffer and not all the vertical buffers and what not.
@@ -71,6 +71,7 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
                    never abandoned, so changes cannot get lost. 
 - [ ] How to search highlighted section with telescope live grep
 - [ ] In the gitsigns blame, how do I open the link?
+- [ ] Telescope explorer (search files & the whole file browser extension) not ignoring . files
 
 ### Unsure
 
