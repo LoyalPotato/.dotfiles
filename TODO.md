@@ -37,7 +37,7 @@ NOTE: Removed nvim-ufo. Wasn't being worth the trouble
 - [x] ~~Path auto complete.~~It supposedly already does this
 - [ ] How to undo close of buffer/file
 - [x] How to switch layouts. For example, I have two verticals, but I want to put the left on the right and vice versa. Same with horizontal
-- [ ] ~~Live grep with a ignore glob list (like vscode...)~~ Not sure what I meant here
+- [ ] Live grep with a ignore glob list (like vscode search where we can exclude files from the search...)
 - [ ] Debugging <https://www.youtube.com/watch?v=RziPWdTzSV8>
 - [x] Configure gitsign hunks. I think this allows for staging sections
 - [x] Keymap to increase size of current buffer, in either direction
