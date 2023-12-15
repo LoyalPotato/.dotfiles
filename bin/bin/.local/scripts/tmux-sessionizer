@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    my_dirs="$HOME/Documents/Work/ $HOME/Documents/Personal/"
+if [ -f "$HOME/bin/.local/.local.env" ]
+then
+    # Example of env DIRS=$HOME/Documents/Work/ $HOME/Documents/Personal/
+    DIRS=$(cat $HOME/bin/.local/.local.env | envsubst | sed "s/DIRS=//")
 else
-    my_dirs="~/"
+    DIRS="."
 fi
 
 if [[ $# -eq 1 ]]; then
     selected=$1
+elif command -v fd &> /dev/null
+then
+    selected=$(fd -t d . $DIRS -d 1 | fzf)
 else
-    selected=$(find $my_dirs -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find $DIRS -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
