@@ -45,6 +45,18 @@ require('mason-lspconfig').setup({
         end,
     }
 })
+require('mason-tool-installer').setup({
+    ensure_installed = {
+        "prettierd", -- prettier formatter
+        "stylua",   -- lua formatter
+        "black",    -- python formatter
+        "eslint_d", -- js/ts linter
+        "golangci-lint", -- go linter
+        "gofumpt", -- go formatter
+        "goimports", -- go formatter
+        "jsonlint", -- json lint
+    },
+})
 
 -- nvim-cmp
 
@@ -59,16 +71,17 @@ cmp.setup({
         { name = 'path' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
-        { name = 'buffer', 
-          option = {
-            get_bufnrs = function()
-                local bufs = {}
-                for _, win in ipairs(vim.api.nvim_list_wins()) do
-                  bufs[vim.api.nvim_win_get_buf(win)] = true
+        {
+            name = 'buffer',
+            option = {
+                get_bufnrs = function()
+                    local bufs = {}
+                    for _, win in ipairs(vim.api.nvim_list_wins()) do
+                        bufs[vim.api.nvim_win_get_buf(win)] = true
+                    end
+                    return vim.tbl_keys(bufs)
                 end
-                return vim.tbl_keys(bufs)
-            end
-          }
+            }
         },
         { name = 'luasnip' },
     },
@@ -102,7 +115,7 @@ cmp.setup({
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
 
         -- Snippets
-        ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-        ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+        -- ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+        -- ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     }),
 })

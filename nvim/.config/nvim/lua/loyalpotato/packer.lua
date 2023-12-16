@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
         }
     }
 
+    use { 'WhoIsSethDaniel/mason-tool-installer.nvim' } -- To auto install any tool of mason
+
     -- bottom status line
     use {
         'nvim-lualine/lualine.nvim',
