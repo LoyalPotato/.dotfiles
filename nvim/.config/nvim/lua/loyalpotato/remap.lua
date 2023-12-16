@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = '[F]ile [E]xplorer' })
+vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "[F]ile [E]xplorer" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -55,13 +55,26 @@ vim.keymap.set("v", "<leader>fs", fmter, { desc = "[F]ormat [S]ection" })
 -- window management
 
 --
-vim.api.nvim_set_keymap("n", "<leader>ve", ":vertical resize +10<CR>", { noremap = true, desc = '[V]ertical [E]xpand' })
-vim.api.nvim_set_keymap("n", "<leader>vt", ":vertical resize -10<CR>", { noremap = true, desc = '[V]ertical [T]runcate' })
+vim.api.nvim_set_keymap("n", "<leader>ve", ":vertical resize +10<CR>", { noremap = true, desc = "[V]ertical [E]xpand" })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>vt",
+	":vertical resize -10<CR>",
+	{ noremap = true, desc = "[V]ertical [T]runcate" }
+)
 
-vim.api.nvim_set_keymap("n", "<leader>he", ":horizontal resize +10<CR>",
-    { noremap = true, desc = '[H]orizontal [E]xpand' })
-vim.api.nvim_set_keymap("n", "<leader>ht", ":horizontal resize -10<CR>",
-    { noremap = true, desc = '[H]orizontal [T]runcate' })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>he",
+	":horizontal resize +10<CR>",
+	{ noremap = true, desc = "[H]orizontal [E]xpand" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>ht",
+	":horizontal resize -10<CR>",
+	{ noremap = true, desc = "[H]orizontal [T]runcate" }
+)
 
 -- NOTE: Some helpful maps
 -- This flips the current buffer according to the action
