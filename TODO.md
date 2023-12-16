@@ -36,7 +36,6 @@
                    never abandoned, so changes cannot get lost. 
 - [ ] How to search highlighted section with telescope live grep
 - [ ] In the gitsigns blame, how do I open the link? I think I was looking at vim-fugitive and the browse about this
-- [ ] Highlight current row that cursor is in (<https://www.youtube.com/watch?v=6ivxInASPdM>)
 - [ ] How to view git file history
 
 ### Unsure
@@ -79,4 +78,4 @@
 - [x] Telescope explorer (search files & the whole file browser extension) not ignoring . files
 - [x] Work with eslint (linting)
 - [x] Work with prettier
-
+- [x] Highlight current row that cursor is in (<https://www.youtube.com/watch?v=6ivxInASPdM>)
