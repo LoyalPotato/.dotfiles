@@ -2,6 +2,18 @@ local action_state = require "telescope.actions.state"
 
 require("telescope").setup {
     defaults = {
+        vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+            "--glob",
+            '!**/.git/*',
+        },
         winblend = 0,
         sorting_strategy = "ascending",
 
@@ -78,14 +90,25 @@ local builtin = require('telescope.builtin')
 -- TODO: Check which ones I'll actually need
 
 -- Regular Telescope
-local find_cmd = { 'rg', '--files', '--hidden', '-g', '!.git' }
+local find_cmd = { 'rg', '--files', '--hidden', '-g', '!.git' } -- NOTE: This can be moved to the setup: https://github.com/nvim-telescope/telescope.nvim/issues/855#issuecomment-1721253959
 vim.keymap.set('n', '<leader>sf', function() builtin.find_files({ hidden = true, find_command = find_cmd }) end,
     { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Search [G]it [F]iles' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
+vim.keymap.set('n', '<leader>sG',
+    function()
+        vim.ui.input({ prompt = 'Glob: ' }, function(pattern)
+            if pattern ~= "" then
+                local opts = {
+                    glob_pattern = pattern,
+                }
+                builtin.live_grep(opts)
+            end
+        end)
+    end,
+    { desc = '[S]earch by [G]rep Custom' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>ss', builtin.treesitter, { desc = '[S]earch [S]ymbols' })
 -- vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
