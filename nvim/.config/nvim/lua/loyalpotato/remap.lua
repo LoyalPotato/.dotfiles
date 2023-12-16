@@ -39,8 +39,17 @@ vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 
 -- Formatting
 
-vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format, { desc = '[F]ormat [A]ll' })
-vim.keymap.set("v", "<leader>fs", vim.lsp.buf.format, { desc = '[F]ormat [S]ection' })
+local fmter = function()
+	local opts = {
+		lsp_fallback = true,
+	}
+	require("conform").format(opts, function()
+		vim.notify("Formatted", "info")
+	end)
+end
+
+vim.keymap.set("n", "<leader>fa", fmter, { desc = "[F]ormat [A]ll" })
+vim.keymap.set("v", "<leader>fs", fmter, { desc = "[F]ormat [S]ection" })
 -- this is for lsp_config <F3>: Format code in current buffer. See :help vim.lsp.buf.format().
 
 -- window management
