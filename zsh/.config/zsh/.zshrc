@@ -158,5 +158,3 @@ SPACESHIP_BATTERY_SHOW=false
 
 # Bindings
 bindkey -s ^f "tmux-sessionizer\n"
-
-#"/opt/homebrew/bin:/opt/homebrew/sbin:/Users/dbazilio/.nvm/versions/node/v18.18.2/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/share/dotnet:~/.dotnet/tools:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/dbazilio/.nvm/versions/node/v18.18.2/bin:/Users/dbazilio/Android/Sdk/emulator:/Users/dbazilio/Android/Sdk/tools:/Users/dbazilio/Android/Sdk/tools/bin:/Users/dbazilio/Android/Sdk/platform-tools:/Users/dbazilio/go/bin/:/Users/dbazilio/Android/Sdk/emulator:/Users/dbazilio/Android/Sdk/tools:/Users/dbazilio/Android/Sdk/tools/bin:/Users/dbazilio/Android/Sdk/platform-tools:/Users/dbazilio/go/bin/""
