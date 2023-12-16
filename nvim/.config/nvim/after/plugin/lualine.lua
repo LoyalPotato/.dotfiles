@@ -39,6 +39,15 @@ require('lualine').setup {
             'encoding',
             'fileformat',
             'filetype',
+            {
+                function()
+                    local linters = require("lint").get_running()
+                    if #linters == 0 then
+                        return "󰦕"
+                    end
+                    return "󱉶 " .. table.concat(linters, ", ")
+                end
+            },
             -- {
             --     require("noice").api.status.search.get,
             --     cond = require("noice").api.status.search.has,
@@ -49,7 +58,7 @@ require('lualine').setup {
         lualine_z = { 'location' }
     },
     inactive_sections = {
-        lualine_a = { 'filename'},
+        lualine_a = { 'filename' },
         lualine_b = {},
         lualine_c = { },
         lualine_x = {},
