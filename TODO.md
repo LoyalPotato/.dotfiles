@@ -34,9 +34,21 @@
                    buffers that are modified are not removed, unless the [!] is
                    given, then they become hidden.  But modified buffers are
                    never abandoned, so changes cannot get lost. 
-- [ ] How to search highlighted section with telescope live grep
+- [ ] ~~How to search highlighted section with telescope live grep~~?
 - [ ] In the gitsigns blame, how do I open the link? I think I was looking at vim-fugitive and the browse about this
 - [ ] How to view git file history
+- [ ] Colorized brackets pairs
+- [ ] Add scrollbars to telescope pickers
+- [ ] How to make git push async/non blocking. Since I don't have any indication that it's pushing I don't know what it's doing while blocked, and if it's related to pushing
+- [ ] Fix grep_string in telescope
+- [ ] Fix snippets not jumpting to the next choice or wtv it's called. Not sure why the keymap isn't working. Basically what happened in vscode and snippets where we used tab to go to the next "to fill" section
+- [ ] How to get the preview for the class name in less files (scss too perhaps) when nested?
+- [ ] How to preview markdown files
+- [ ] Fix errors on saving yml files <https://github.com/redhat-developer/yaml-language-server/issues/912>
+- [ ] Figure out how to use emmet language (eg: div.class*2)
+- [ ] I haven't figured it out, but sometimes Ctrl-C doesn't work the first time. Maybe something else is using it? Something tells me its fucking ufo... If I spam it, errors in ufo show up
+- [ ] In a snippet, how do I go to the next "to fill" section?
+- [ ] Why are block comments weird in JS (at least JS)
 
 ### Unsure
 
