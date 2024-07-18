@@ -129,6 +129,8 @@ pupdate /usr/local/go/bin
 pupdate /usr/bin
 pupdate $HOME/.dotnet/tools
 pupdate $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
+pupdate $HOME/development/flutter/bin
+pupdate $HOME/.gem/bin
 
 pupdate $HOME/bin
 pupdate $HOME/bin/.local/scripts
