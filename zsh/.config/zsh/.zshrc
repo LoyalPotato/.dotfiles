@@ -8,8 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -124,16 +124,27 @@ pupdate $ANDROID_HOME/emulator
 pupdate $ANDROID_HOME/tools
 pupdate $ANDROID_HOME/tools/bin
 pupdate $ANDROID_HOME/platform-tools
+
 pupdate $HOME/go/bin/
 pupdate /usr/local/go/bin
+
+pupdate /opt/nvim-linux-x86_64/bin
 pupdate /usr/bin
+
 pupdate $HOME/.dotnet/tools
+
 pupdate $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
+
 pupdate $HOME/development/flutter/bin
+
 pupdate $HOME/.gem/bin
 
 pupdate $HOME/bin
 pupdate $HOME/bin/.local/scripts
+
+pupdate $HOME/.local/bin
+
+alias vim="nvim"
 
 # # Remove /mnt/c due to slowness on wsl
 if [[ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]]; then
@@ -142,8 +153,6 @@ if [[ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]]; then
     export PNPM_HOME="/home/loyalpotato/.local/share/pnpm"
     pupdate $PNPM_HOME
 fi
-
-alias vim="nvim"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
